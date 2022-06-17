@@ -1,16 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import Control from '../Control/Control';
+import logo from '../../logo.svg';
 import './App.css';
 
 function App() {
   const [name, setName] = React.useState("World");
 
-  return (
+   return (
     <div className="App">
       <header className="App-header">
+        <h1>Your name is {name.length} characters long.</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello, {name}!</h1>
-        <input type="text" onChange={(e) => setName(e.target.value)} />
+        <Control name={name} setName={setName}/>
       </header>
     </div>
   );
